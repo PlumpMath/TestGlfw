@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="..\glad\src\glad.c" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="AssetManager.cpp" />
+    <ClCompile Include="Breakout.cpp" />
+    <ClCompile Include="Main_BACK.cpp" />
+    <ClCompile Include="SpriteRenderer.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="Text.cpp" />
+    <ClCompile Include="ParticleSystem.cpp" />
+    <ClCompile Include="SoundEngine.cpp" />
+    <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="SpriteBatch.cpp" />
+    <ClCompile Include="CPUVerts.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="AssetManager.h" />
+    <ClInclude Include="Breakout.h" />
+    <ClInclude Include="Error.h" />
+    <ClInclude Include="SpriteRenderer.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="Text.h" />
+    <ClInclude Include="GLCommon.h" />
+    <ClInclude Include="ParticleSystem.h" />
+    <ClInclude Include="SoundEngine.h" />
+    <ClInclude Include="Sound.h" />
+    <ClInclude Include="Rect.h" />
+    <ClInclude Include="SpriteBatch.h" />
+    <ClInclude Include="IGame.h" />
+    <ClInclude Include="CPUVerts.h" />
+  </ItemGroup>
+</Project>
