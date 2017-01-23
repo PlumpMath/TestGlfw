@@ -5,8 +5,9 @@
 #include <iostream>
 #include "glad/glad.h"
 #include <glm/mat4x2.hpp>
+#include "NonCopyable.h"
 
-class Shader
+class Shader : NonCopyable
 {
 public:
 	Shader() = default;

@@ -17,6 +17,9 @@
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="SpriteBatch.cpp" />
     <ClCompile Include="CPUVerts.cpp" />
+    <ClCompile Include="LoadSpeedTest.cpp" />
+    <ClCompile Include="PerformanceTimer.cpp" />
+    <ClCompile Include="LoadDDSTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Texture.h" />
@@ -37,5 +40,9 @@
     <ClInclude Include="SpriteBatch.h" />
     <ClInclude Include="IGame.h" />
     <ClInclude Include="CPUVerts.h" />
+    <ClInclude Include="NonCopyable.h" />
+    <ClInclude Include="LoadSpeedTest.h" />
+    <ClInclude Include="PerformanceTimer.h" />
+    <ClInclude Include="LoadDDSTest.h" />
   </ItemGroup>
 </Project>

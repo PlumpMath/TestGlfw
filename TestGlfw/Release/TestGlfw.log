@@ -1,0 +1,23 @@
+﻿  glad.c
+  AssetManager.cpp
+  Breakout.cpp
+  Font.cpp
+  GameObject.cpp
+  LoadSpeedTest.cpp
+  Main.cpp
+  Main_BACK.cpp
+  ParticleSystem.cpp
+  CPUVerts.cpp
+  PerformanceTimer.cpp
+  Shader.cpp
+  Sound.cpp
+  SoundEngine.cpp
+  SpriteBatch.cpp
+  SpriteRenderer.cpp
+  Text.cpp
+  Texture.cpp
+  Generating code
+  All 1541 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  TestGlfw.vcxproj -> C:\Users\Robert\Desktop\TestGlfw\Release\TestGlfw.exe
+  TestGlfw.vcxproj -> C:\Users\Robert\Desktop\TestGlfw\Release\TestGlfw.pdb (Full PDB)

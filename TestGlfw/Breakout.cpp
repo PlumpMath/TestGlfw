@@ -28,7 +28,7 @@ void Breakout::Init()
 	spriteShader.SetMatrix4("projection", projection);
 
 	m_Renderer = std::make_unique<SpriteRenderer>(spriteShader);
-	ace = &AssetManager::LoadTexture("Ace_000.png");
+	ace = AssetManager::LoadTexture("Ace_000.png");
 	//m_Renderer->SetSrcRect(Rect(0, 0, 164, 82), *ace);
 	//m_Renderer->SetSrcRect(Rect(0, 0, 82, 82), *ace);
 
@@ -39,8 +39,8 @@ void Breakout::Init()
 	text.SetShader(AssetManager::GetShader("text"));
 	text.SetString("Hello");
 
-	auto& particleTex = AssetManager::LoadTexture("particle.png");
-	particles.Init(particleTex, 500);
+	auto particleTex = AssetManager::LoadTexture("particle.png");
+	particles.Init(*particleTex, 500);
 }
 
 void Breakout::ProcessInput(float delta, double mouse_x, double mouse_y)

@@ -75,6 +75,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\irrKlang-32bit-1.5.0\irrKlang-1.5.0\include;..\freetype-2.3.5-1-bin\include\freetype2;..\freetype-2.3.5-1-bin\include;..\glm-0.9.8.3\glm;..\glad\include;..\glfw-3.2.1.bin.WIN32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>..\irrKlang-32bit-1.5.0\irrKlang-1.5.0\lib\Win32-visualStudio;..\freetype-2.3.5-1-bin\lib;..\glfw-3.2.1.bin.WIN32\lib-vc2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -95,10 +96,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\irrKlang-32bit-1.5.0\irrKlang-1.5.0\include;..\freetype-2.3.5-1-bin\include\freetype2;..\freetype-2.3.5-1-bin\include;..\glm-0.9.8.3\glm;..\glad\include;..\glfw-3.2.1.bin.WIN32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\irrKlang-32bit-1.5.0\irrKlang-1.5.0\lib\Win32-visualStudio;..\freetype-2.3.5-1-bin\lib;..\glfw-3.2.1.bin.WIN32\lib-vc2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;freetype.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -120,10 +125,13 @@
     <ClCompile Include="Breakout.cpp" />
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="LoadDDSTest.cpp" />
+    <ClCompile Include="LoadSpeedTest.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Main_BACK.cpp" />
     <ClCompile Include="ParticleSystem.cpp" />
     <ClCompile Include="CPUVerts.cpp" />
+    <ClCompile Include="PerformanceTimer.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="SoundEngine.cpp" />
@@ -140,8 +148,12 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GLCommon.h" />
     <ClInclude Include="IGame.h" />
+    <ClInclude Include="LoadDDSTest.h" />
+    <ClInclude Include="LoadSpeedTest.h" />
+    <ClInclude Include="NonCopyable.h" />
     <ClInclude Include="ParticleSystem.h" />
     <ClInclude Include="CPUVerts.h" />
+    <ClInclude Include="PerformanceTimer.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Sound.h" />

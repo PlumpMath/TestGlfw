@@ -2,8 +2,9 @@
 #include <string>
 #include <vector>
 #include "glad/glad.h"
+#include "NonCopyable.h"
 
-class Texture
+class Texture : NonCopyable
 {
 public:
 	Texture();

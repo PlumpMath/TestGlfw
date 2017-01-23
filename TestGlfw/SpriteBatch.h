@@ -39,11 +39,14 @@ public:
 	void Flush();
 	void Draw(Texture* texture, glm::vec2 position, glm::vec3 color = glm::vec3(1.f));
 	void Draw(Texture* texture, const Rect& srcRect, glm::vec2 position, glm::vec2 scale, 
-		float rotate, glm::vec3 color, glm::vec2 origin);
+		float rotate, glm::vec4 color, glm::vec2 origin);
+	/*void Draw(Texture* texture, glm::vec2 position, glm::vec2 scale,
+		float rotate, glm::vec3 color, glm::vec2 origin);*/
 
 	GLuint VAO, VBO;
 
 private:
+	const float PiOver180 = 0.01745329251f;
 	Shader* m_Shader;
 	std::vector<float> m_Verts;
 	int screenW = 0;

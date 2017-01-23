@@ -18,6 +18,7 @@
 #include "SoundEngine.h"
 #include "IGame.h"
 #include "CPUVerts.h"
+#include "LoadSpeedTest.h"
 
 // Function prototypes
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
@@ -87,6 +88,7 @@ int main()
 	GLCall(glEnable(GL_MULTISAMPLE));
 	GLCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
 
+	//m_Game = std::make_unique<LoadSpeedTest>();
 	m_Game = std::make_unique<CPUVerts>(WIDTH, HEIGHT);
 	//m_Game = std::make_unique<Breakout>(WIDTH, HEIGHT);
 	GLCall(glClearColor(0.2f, 0.3f, 0.3f, 1.0f));

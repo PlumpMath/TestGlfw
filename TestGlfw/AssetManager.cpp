@@ -1,7 +1,7 @@
 #include "AssetManager.h"
 
 std::map<std::string, std::unique_ptr<Shader>> AssetManager::m_shaders;
-std::map<std::string, Texture> AssetManager::m_textures;
+std::map<std::string, std::unique_ptr<Texture>> AssetManager::m_textures;
 
 Shader& AssetManager::LoadShader(const std::string& vertPath, const std::string& fragPath, const std::string& name)
 {
@@ -15,14 +15,14 @@ Shader& AssetManager::LoadShader(const std::string& vertPath, const std::string&
 	return *m_shaders[name];
 }
 
-Texture& AssetManager::LoadTexture(const std::string& texturePath)
+Texture* AssetManager::LoadTexture(const std::string& texturePath)
 {
 	if (m_textures.count(texturePath) == 0)
 	{
-		m_textures.insert({ texturePath, Texture() });
-		m_textures[texturePath].Load(texturePath);
+		m_textures.insert({ texturePath, std::move(std::make_unique<Texture>()) });
+		m_textures[texturePath]->Load(texturePath);
 	}
-	return m_textures[texturePath];
+	return m_textures[texturePath].get();
 }
 
 Shader& AssetManager::GetShader(const std::string& name)
@@ -32,7 +32,7 @@ Shader& AssetManager::GetShader(const std::string& name)
 
 Texture& AssetManager::GetTexture(const std::string& name)
 {
-	return m_textures[name];
+	return *m_textures[name];
 }
 
 void AssetManager::Unload()
