@@ -20,6 +20,7 @@
     <ClCompile Include="LoadSpeedTest.cpp" />
     <ClCompile Include="PerformanceTimer.cpp" />
     <ClCompile Include="LoadDDSTest.cpp" />
+    <ClCompile Include="nv_dds.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Texture.h" />
@@ -44,5 +45,37 @@
     <ClInclude Include="LoadSpeedTest.h" />
     <ClInclude Include="PerformanceTimer.h" />
     <ClInclude Include="LoadDDSTest.h" />
+    <ClInclude Include="nv_dds.h" />
+    <ClInclude Include="gliml.h">
+      <Filter>gliml</Filter>
+    </ClInclude>
+    <ClInclude Include="gliml_dds.h">
+      <Filter>gliml</Filter>
+    </ClInclude>
+    <ClInclude Include="gliml_ktx.h">
+      <Filter>gliml</Filter>
+    </ClInclude>
+    <ClInclude Include="gliml_pvr.h">
+      <Filter>gliml</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="gliml">
+      <UniqueIdentifier>{099f2a5a-649d-43eb-8dbc-9b71af5578de}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="gliml.inl">
+      <Filter>gliml</Filter>
+    </None>
+    <None Include="gliml_dds.inl">
+      <Filter>gliml</Filter>
+    </None>
+    <None Include="gliml_ktx.inl">
+      <Filter>gliml</Filter>
+    </None>
+    <None Include="gliml_pvr.inl">
+      <Filter>gliml</Filter>
+    </None>
   </ItemGroup>
 </Project>

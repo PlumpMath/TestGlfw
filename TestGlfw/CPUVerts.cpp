@@ -17,7 +17,9 @@ CPUVerts::~CPUVerts()
 void CPUVerts::Init()
 {
 	AssetManager::LoadShader("batch.vert", "batch.frag", "batch");
+	AssetManager::LoadShader("TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", "dunno");
 	auto& shader = AssetManager::GetShader("batch");
+	//auto& shader = AssetManager::GetShader("dunno");
 
 	glm::mat4 projection = glm::ortho(0.f, static_cast<float>(width),
 		static_cast<float>(height), 0.f, -1.f, 1.f);
@@ -27,7 +29,8 @@ void CPUVerts::Init()
 	shader.SetMatrix4("projection", projection);
 
 	//ace = AssetManager::LoadTexture("Ace_000.png");
-	ace = AssetManager::LoadTexture("topScreenBG_000_PNG_BC7_1.DDS");
+	ace = AssetManager::LoadTexture("fsScreenLoopBG_042.dds");
+	//ace = AssetManager::LoadTexture("Mipster-splash_PNG_DXT5.dds");
 
 	m_Batch = std::make_unique<SpriteBatch>(width, height, &shader);
 }
@@ -59,8 +62,8 @@ float randZeroToOne()
 void CPUVerts::Render()
 {
 	m_Batch->Begin();
-	/*m_Batch->Draw(ace, Rect(0, 0, 162, 162), glm::vec2(0, 0), glm::vec2(1.f, 1.f), 0.f,
-		glm::vec4(1.f), glm::vec2(0,0));*/
+	m_Batch->Draw(ace, Rect(0, 0, 1024, 768), glm::vec2(0.f), glm::vec2(1.f), 0.f,
+		glm::vec4(1.f), glm::vec2(0,0));
 	
 	static float rot = 0.f;
 	rot += 0.1f;
@@ -73,11 +76,11 @@ void CPUVerts::Render()
 	m_Batch->Draw(ace, Rect(0, 0, 162, 162), pos, scale, rot,
 		glm::vec4(1.f), glm::vec2(ace->m_width / 2, ace->m_height / 2));*/
 
-	m_Batch->Draw(ace, Rect(81, 81, 81, 81), glm::vec2(300.f, 0.f), glm::vec2(1.f, 1.f), 0.f,
-		glm::vec4(1.f), glm::vec2(ace->m_width / 2, ace->m_height / 2));
+	/*m_Batch->Draw(ace, Rect(0, 0, 162, 162), glm::vec2(300.f, 0.f), glm::vec2(1.f, 1.f), 0.f,
+		glm::vec4(1.f), glm::vec2(ace->m_width / 2, ace->m_height / 2));*/
 
-	m_Batch->Draw(ace, Rect(0, 0, 81, 81), glm::vec2(200.f, 200.f), glm::vec2(1.f, 1.f), rot,
-		glm::vec4(1.f), glm::vec2(ace->m_width/2, ace->m_height/2));
+	/*m_Batch->Draw(ace, Rect(0, 0, 81, 81), glm::vec2(200.f, 200.f), glm::vec2(1.f, 1.f), rot,
+		glm::vec4(1.f), glm::vec2(ace->m_width/2, ace->m_height/2));*/
 
 
 	/*for(auto i = 0; i < 1000; i += 5)

@@ -18,5 +18,8 @@ public:
 	GLuint m_id;
 	
 	std::string m_filePath;
+
+private:
+	void LoadDDS(const std::string& filepath);
 };
 
